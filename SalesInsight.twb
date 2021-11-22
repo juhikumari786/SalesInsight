@@ -1,0 +1,1674 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.1018.0949                               -->
+<workbook source-build='2021.3.3 (20213.21.1018.0949)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='transactions+ (sales)' inline='true' name='federated.1ax5xj314bghl61fhfic809qmume' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='127.0.0.1' name='mysql.1bh0lml0rfn8wd1fgi3d31286a60'>
+            <connection class='mysql' dbname='sales' odbc-native-protocol='' one-time-sql='' port='3306' server='127.0.0.1' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='customers' table='[customers]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='transactions' table='[transactions]' type='table' />
+          <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='customers' table='[customers]' type='table' />
+          <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='date' table='[date]' type='table' />
+          <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='markets' table='[markets]' type='table' />
+          <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='products' table='[products]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[cost_price]' value='[transactions].[cost_price]' />
+          <map key='[currency]' value='[transactions].[currency]' />
+          <map key='[custmer_name]' value='[customers].[custmer_name]' />
+          <map key='[customer_code (customers)]' value='[customers].[customer_code]' />
+          <map key='[customer_code]' value='[transactions].[customer_code]' />
+          <map key='[customer_type]' value='[customers].[customer_type]' />
+          <map key='[cy_date]' value='[date].[cy_date]' />
+          <map key='[date]' value='[date].[date]' />
+          <map key='[date_yy_mmm]' value='[date].[date_yy_mmm]' />
+          <map key='[market_code]' value='[transactions].[market_code]' />
+          <map key='[markets_code]' value='[markets].[markets_code]' />
+          <map key='[markets_name]' value='[markets].[markets_name]' />
+          <map key='[month_name]' value='[date].[month_name]' />
+          <map key='[order_date]' value='[transactions].[order_date]' />
+          <map key='[product_code (products)]' value='[products].[product_code]' />
+          <map key='[product_code]' value='[transactions].[product_code]' />
+          <map key='[product_type]' value='[products].[product_type]' />
+          <map key='[profit_margin]' value='[transactions].[profit_margin]' />
+          <map key='[profit_margin_percentage]' value='[transactions].[profit_margin_percentage]' />
+          <map key='[sales_amount]' value='[transactions].[sales_amount]' />
+          <map key='[sales_qty]' value='[transactions].[sales_qty]' />
+          <map key='[year]' value='[date].[year]' />
+          <map key='[zone]' value='[markets].[zone]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>product_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_code]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>product_code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[customer_code]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>customer_code</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>market_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[market_code]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>market_code</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_qty</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[sales_qty]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>sales_qty</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sales_amount]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>sales_amount</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[currency]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>currency</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin_percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin_percentage]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>profit_margin_percentage</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profit_margin</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[profit_margin]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>profit_margin</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_price</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost_price]</local-name>
+            <parent-name>[transactions]</parent-name>
+            <remote-alias>cost_price</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[transactions_D45310E58A8F4D0CA308E98292272C0B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[customer_code (customers)]</local-name>
+            <parent-name>[customers]</parent-name>
+            <remote-alias>customer_code</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_26E1862C679244AC8909631E1F9EFE33]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>custmer_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[custmer_name]</local-name>
+            <parent-name>[customers]</parent-name>
+            <remote-alias>custmer_name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_26E1862C679244AC8909631E1F9EFE33]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customer_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[customer_type]</local-name>
+            <parent-name>[customers]</parent-name>
+            <remote-alias>customer_type</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_26E1862C679244AC8909631E1F9EFE33]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_1786CC2B38F043F9BB8405BA203E8105]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cy_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[cy_date]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>cy_date</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_1786CC2B38F043F9BB8405BA203E8105]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_1786CC2B38F043F9BB8405BA203E8105]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[month_name]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>month_name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_1786CC2B38F043F9BB8405BA203E8105]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_yy_mmm</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[date_yy_mmm]</local-name>
+            <parent-name>[date]</parent-name>
+            <remote-alias>date_yy_mmm</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[date_1786CC2B38F043F9BB8405BA203E8105]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>markets_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[markets_code]</local-name>
+            <parent-name>[markets]</parent-name>
+            <remote-alias>markets_code</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[markets_DB20DE99993244CD8BC6BAA2C3939A40]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>markets_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[markets_name]</local-name>
+            <parent-name>[markets]</parent-name>
+            <remote-alias>markets_name</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[markets_DB20DE99993244CD8BC6BAA2C3939A40]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zone</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[zone]</local-name>
+            <parent-name>[markets]</parent-name>
+            <remote-alias>zone</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[markets_DB20DE99993244CD8BC6BAA2C3939A40]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_code (products)]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>product_code</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_ED1972FA7B8447F59E285D56B0C3607B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[product_type]</local-name>
+            <parent-name>[products]</parent-name>
+            <remote-alias>product_type</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>45</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[products_ED1972FA7B8447F59E285D56B0C3607B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Noramalized Amount' datatype='real' name='[Calculation_331859038090604544]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [currency]==&apos;USD&apos;THEN[sales_amount]*73 ELSE[sales_amount] END' />
+      </column>
+      <column caption='Blank' datatype='string' name='[Calculation_331859038443569153]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&quot; &quot;' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='customers' datatype='table' name='[__tableau_internal_object_id__].[customers_26E1862C679244AC8909631E1F9EFE33]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='date' datatype='table' name='[__tableau_internal_object_id__].[date_1786CC2B38F043F9BB8405BA203E8105]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='markets' datatype='table' name='[__tableau_internal_object_id__].[markets_DB20DE99993244CD8BC6BAA2C3939A40]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='products' datatype='table' name='[__tableau_internal_object_id__].[products_ED1972FA7B8447F59E285D56B0C3607B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='transactions' datatype='table' name='[__tableau_internal_object_id__].[transactions_D45310E58A8F4D0CA308E98292272C0B]' role='measure' type='quantitative' />
+      <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+      <column caption='Custmer Name' datatype='string' name='[custmer_name]' role='dimension' type='nominal' />
+      <column caption='Customer Code (Customers)' datatype='string' name='[customer_code (customers)]' role='dimension' type='nominal' />
+      <column caption='Customer Code' datatype='string' name='[customer_code]' role='dimension' type='nominal' />
+      <column caption='Customer Type' datatype='string' name='[customer_type]' role='dimension' type='nominal' />
+      <column caption='Cy Date' datatype='date' name='[cy_date]' role='dimension' type='ordinal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Date Yy Mmm' datatype='string' name='[date_yy_mmm]' role='dimension' type='nominal' />
+      <column caption='Market Code' datatype='string' name='[market_code]' role='dimension' type='nominal' />
+      <column caption='Markets Code' datatype='string' name='[markets_code]' role='dimension' type='nominal' />
+      <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+      <column caption='Month Name' datatype='string' name='[month_name]' role='dimension' type='nominal' />
+      <column caption='Order Date' datatype='date' name='[order_date]' role='dimension' type='ordinal' />
+      <column caption='Product Code (Products)' datatype='string' name='[product_code (products)]' role='dimension' type='nominal' />
+      <column caption='Product Code' datatype='string' name='[product_code]' role='dimension' type='nominal' />
+      <column caption='Product Type' datatype='string' name='[product_type]' role='dimension' type='nominal' />
+      <column caption='Sales Amount' datatype='real' name='[sales_amount]' role='measure' type='quantitative' />
+      <column caption='Sales Qty' datatype='integer' name='[sales_qty]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column caption='Zone' datatype='string' name='[zone]' role='dimension' type='nominal' />
+      <column-instance column='[cy_date]' derivation='Year' name='[yr:cy_date:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Blank,YEAR(Cy Date))' hidden='true' name='[Action (Blank,YEAR(Cy Date))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_331859038443569153]' />
+          <groupfilter function='level-members' level='[yr:cy_date:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Markets Name)' hidden='true' name='[Action (Markets Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[markets_name]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='1000' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='product_code' />
+        <field-sort-custom-order field='customer_code' />
+        <field-sort-custom-order field='market_code' />
+        <field-sort-custom-order field='order_date' />
+        <field-sort-custom-order field='sales_qty' />
+        <field-sort-custom-order field='sales_amount' />
+        <field-sort-custom-order field='Calculation_331859038090604544' />
+        <field-sort-custom-order field='currency' />
+      </field-sort-info>
+      <filter class='categorical' column='[markets_code]' filter-group='2'>
+        <groupfilter from='&quot;Mark001&quot;' function='range' level='[markets_code]' to='&quot;Mark015&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='quantitative' column='[sales_amount]' filter-group='2' included-values='in-range'>
+        <min>1.0</min>
+      </filter>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='customers' id='customers_26E1862C679244AC8909631E1F9EFE33'>
+            <properties context=''>
+              <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='customers' table='[customers]' type='table' />
+            </properties>
+          </object>
+          <object caption='date' id='date_1786CC2B38F043F9BB8405BA203E8105'>
+            <properties context=''>
+              <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='date' table='[date]' type='table' />
+            </properties>
+          </object>
+          <object caption='markets' id='markets_DB20DE99993244CD8BC6BAA2C3939A40'>
+            <properties context=''>
+              <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='markets' table='[markets]' type='table' />
+            </properties>
+          </object>
+          <object caption='products' id='products_ED1972FA7B8447F59E285D56B0C3607B'>
+            <properties context=''>
+              <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='products' table='[products]' type='table' />
+            </properties>
+          </object>
+          <object caption='transactions' id='transactions_D45310E58A8F4D0CA308E98292272C0B'>
+            <properties context=''>
+              <relation connection='mysql.1bh0lml0rfn8wd1fgi3d31286a60' name='transactions' table='[transactions]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[customer_code]' />
+              <expression op='[customer_code (customers)]' />
+            </expression>
+            <first-end-point object-id='transactions_D45310E58A8F4D0CA308E98292272C0B' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='customers_26E1862C679244AC8909631E1F9EFE33' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_date]' />
+              <expression op='[date]' />
+            </expression>
+            <first-end-point object-id='transactions_D45310E58A8F4D0CA308E98292272C0B' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='date_1786CC2B38F043F9BB8405BA203E8105' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[market_code]' />
+              <expression op='[markets_code]' />
+            </expression>
+            <first-end-point object-id='transactions_D45310E58A8F4D0CA308E98292272C0B' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='markets_DB20DE99993244CD8BC6BAA2C3939A40' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[product_code]' />
+              <expression op='[product_code (products)]' />
+            </expression>
+            <first-end-point object-id='transactions_D45310E58A8F4D0CA308E98292272C0B' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='products_ED1972FA7B8447F59E285D56B0C3607B' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_D50884DE361942B0A269B0C4848C88B6]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard-Revenue' type='sheet' worksheet='Year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard-Revenue' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard-Revenue' type='sheet' worksheet='Revenue by Markets' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard-Revenue' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Blank' datatype='string' name='[Calculation_331859038443569153]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot; &quot;' />
+            </column>
+            <column caption='Cy Date' datatype='date' name='[cy_date]' role='dimension' type='ordinal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[cy_date]' derivation='Month' name='[mn:cy_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_331859038443569153]' derivation='None' name='[none:Calculation_331859038443569153:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cy_date]' derivation='Year' name='[yr:cy_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Blank,YEAR(Cy Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_D50884DE361942B0A269B0C4848C88B6]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Calculation_331859038443569153]' member='&quot; &quot;' />
+              <groupfilter function='member' level='[yr:cy_date:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Blank,YEAR(Cy Date))]</column>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='5' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.1ax5xj314bghl61fhfic809qmume].[yr:cy_date:ok]' value='12' />
+            <format attr='font-weight' field='[federated.1ax5xj314bghl61fhfic809qmume].[yr:cy_date:ok]' value='bold' />
+            <format attr='font-weight' field='[federated.1ax5xj314bghl61fhfic809qmume].[mn:cy_date:ok]' value='bold' />
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[mn:cy_date:ok]' value='iLLL' />
+            <format attr='font-size' field='[federated.1ax5xj314bghl61fhfic809qmume].[mn:cy_date:ok]' value='12' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[none:Calculation_331859038443569153:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ax5xj314bghl61fhfic809qmume].[mn:cy_date:ok]</cols>
+      </table>
+      <simple-id uuid='{7C08C3E8-640C-4695-ACEC-16925C7472B7}' />
+    </worksheet>
+    <worksheet name='Profit'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column datatype='real' name='[profit_margin]' role='measure' type='quantitative' />
+            <column-instance column='[profit_margin]' derivation='Sum' name='[sum:profit_margin:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:profit_margin:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:profit_margin:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#59a14f' fontsize='18'>Profit</run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#59a14f' fontsize='18'><![CDATA[<[federated.1ax5xj314bghl61fhfic809qmume].[sum:profit_margin:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{113E929E-BC8B-4335-B1E6-A939122F842C}' />
+    </worksheet>
+    <worksheet name='Quantity'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column caption='Sales Qty' datatype='integer' name='[sales_qty]' role='measure' type='quantitative' />
+            <column-instance column='[sales_qty]' derivation='Sum' name='[sum:sales_qty:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-size' value='14' />
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='20'>Sales Quantity</run>
+                <run>Æ&#10;</run>
+                <run fontsize='20'><![CDATA[<[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{875C3EE2-F77C-4D0E-9070-A6AD12E67469}' />
+    </worksheet>
+    <worksheet name='Revenue'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Noramalized Amount' datatype='real' name='[Calculation_331859038090604544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [currency]==&apos;USD&apos;THEN[sales_amount]*73 ELSE[sales_amount] END' />
+            </column>
+            <column caption='Blank' datatype='string' name='[Calculation_331859038443569153]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot; &quot;' />
+            </column>
+            <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+            <column caption='Cy Date' datatype='date' name='[cy_date]' role='dimension' type='ordinal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column caption='Sales Amount' datatype='real' name='[sales_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_331859038090604544]' derivation='Sum' name='[sum:Calculation_331859038090604544:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cy_date]' derivation='Year' name='[yr:cy_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Blank,YEAR(Cy Date))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_D50884DE361942B0A269B0C4848C88B6]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Calculation_331859038443569153]' member='&quot; &quot;' />
+              <groupfilter function='member' level='[yr:cy_date:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Blank,YEAR(Cy Date))]</column>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+            <format attr='color' value='#000000' />
+            <format attr='font-size' value='14' />
+            <format attr='text-align' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Total Revenue&#10;&lt;</run>
+                <run>[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='left' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E7AF9CEC-3D0A-4C32-806E-A30E825A3A16}' />
+    </worksheet>
+    <worksheet name='Revenue by Markets'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Noramalized Amount' datatype='real' name='[Calculation_331859038090604544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [currency]==&apos;USD&apos;THEN[sales_amount]*73 ELSE[sales_amount] END' />
+            </column>
+            <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[markets_name]' derivation='None' name='[none:markets_name:nk]' pivot='key' type='nominal' />
+            <column caption='Sales Amount' datatype='real' name='[sales_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_331859038090604544]' derivation='Sum' name='[sum:Calculation_331859038090604544:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ax5xj314bghl61fhfic809qmume].[none:markets_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='66' />
+            <format attr='cell-h' value='22' />
+            <format attr='cell' value='22' />
+            <format attr='cell-q' value='110' />
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ax5xj314bghl61fhfic809qmume].[none:markets_name:nk]' value='72' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='right' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ax5xj314bghl61fhfic809qmume].[none:markets_name:nk]</rows>
+        <cols>[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]</cols>
+      </table>
+      <simple-id uuid='{284AC2C1-349D-4C81-AFCA-C1CB413B93A2}' />
+    </worksheet>
+    <worksheet name='Revenue by Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Noramalized Amount' datatype='real' name='[Calculation_331859038090604544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [currency]==&apos;USD&apos;THEN[sales_amount]*73 ELSE[sales_amount] END' />
+            </column>
+            <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+            <column caption='Cy Date' datatype='date' name='[cy_date]' role='dimension' type='ordinal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[cy_date]' derivation='Month' name='[mn:cy_date:ok]' pivot='key' type='ordinal' />
+            <column caption='Sales Amount' datatype='real' name='[sales_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_331859038090604544]' derivation='Sum' name='[sum:Calculation_331859038090604544:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cy_date]' derivation='Year' name='[yr:cy_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#f2e2da</color>
+                <color>#f3d3c3</color>
+                <color>#f5c4ab</color>
+                <color>#f6b493</color>
+                <color>#f8a57c</color>
+                <color>#f99563</color>
+                <color>#fa854b</color>
+                <color>#fc7532</color>
+                <color>#fd6519</color>
+                <color>#ff5500</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' />
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]</rows>
+        <cols>([federated.1ax5xj314bghl61fhfic809qmume].[yr:cy_date:ok] / [federated.1ax5xj314bghl61fhfic809qmume].[mn:cy_date:ok])</cols>
+      </table>
+      <simple-id uuid='{6559DC65-91EA-4343-8B8D-CB4FD61CB175}' />
+    </worksheet>
+    <worksheet name='Sales Quantity by Market'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[markets_name]' derivation='None' name='[none:markets_name:nk]' pivot='key' type='nominal' />
+            <column caption='Sales Qty' datatype='integer' name='[sales_qty]' role='measure' type='quantitative' />
+            <column-instance column='[sales_qty]' derivation='Sum' name='[sum:sales_qty:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ax5xj314bghl61fhfic809qmume].[none:markets_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='66' />
+            <format attr='cell-h' value='22' />
+            <format attr='cell' value='22' />
+            <format attr='cell-q' value='110' />
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ax5xj314bghl61fhfic809qmume].[none:markets_name:nk]' value='88' />
+            <format attr='background-color' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ax5xj314bghl61fhfic809qmume].[none:markets_name:nk]</rows>
+        <cols>[federated.1ax5xj314bghl61fhfic809qmume].[sum:sales_qty:qk]</cols>
+      </table>
+      <simple-id uuid='{F25E0DB1-6C82-4E8A-919B-8F98C1F01C54}' />
+    </worksheet>
+    <worksheet name='Top 5 Customers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Noramalized Amount' datatype='real' name='[Calculation_331859038090604544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [currency]==&apos;USD&apos;THEN[sales_amount]*73 ELSE[sales_amount] END' />
+            </column>
+            <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+            <column caption='Custmer Name' datatype='string' name='[custmer_name]' role='dimension' type='nominal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[custmer_name]' derivation='None' name='[none:custmer_name:nk]' pivot='key' type='nominal' />
+            <column caption='Sales Amount' datatype='real' name='[sales_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_331859038090604544]' derivation='Sum' name='[sum:Calculation_331859038090604544:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]' context='true'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[none:custmer_name:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_331859038090604544])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:custmer_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ax5xj314bghl61fhfic809qmume].[none:custmer_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[none:custmer_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='cols' value='#000000' />
+            <format attr='font-weight' scope='cols' value='bold' />
+            <format attr='font-size' scope='cols' value='10' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ax5xj314bghl61fhfic809qmume].[none:custmer_name:nk]</rows>
+        <cols>[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]</cols>
+      </table>
+      <simple-id uuid='{2D826E7A-5042-4891-BDCD-C2AF64A8EBA0}' />
+    </worksheet>
+    <worksheet name='Top 5 Products'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Noramalized Amount' datatype='real' name='[Calculation_331859038090604544]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [currency]==&apos;USD&apos;THEN[sales_amount]*73 ELSE[sales_amount] END' />
+            </column>
+            <column caption='Currency' datatype='string' name='[currency]' role='dimension' type='nominal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[product_code (products)]' derivation='None' name='[none:product_code (products):nk]' pivot='key' type='nominal' />
+            <column caption='Product Code (Products)' datatype='string' name='[product_code (products)]' role='dimension' type='nominal' />
+            <column caption='Sales Amount' datatype='real' name='[sales_amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_331859038090604544]' derivation='Sum' name='[sum:Calculation_331859038090604544:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]' context='true'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[none:product_code (products):nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_331859038090604544])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:product_code (products):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1ax5xj314bghl61fhfic809qmume].[none:product_code (products):nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[none:product_code (products):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='c#,##0,,.00M;(#,##0,,.00M)' />
+            <format attr='color' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='#1b1b1b' />
+            <format attr='font-weight' field='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ax5xj314bghl61fhfic809qmume].[none:product_code (products):nk]' value='60' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' scope='cols' value='10' />
+            <format attr='font-weight' scope='cols' value='bold' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ax5xj314bghl61fhfic809qmume].[none:product_code (products):nk]</rows>
+        <cols>[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]</cols>
+      </table>
+      <simple-id uuid='{3C0F4EA4-170F-4946-A0A2-D46F136A5C60}' />
+    </worksheet>
+    <worksheet name='Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='transactions+ (sales)' name='federated.1ax5xj314bghl61fhfic809qmume' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ax5xj314bghl61fhfic809qmume'>
+            <column caption='Blank' datatype='string' name='[Calculation_331859038443569153]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&quot; &quot;' />
+            </column>
+            <column caption='Cy Date' datatype='date' name='[cy_date]' role='dimension' type='ordinal' />
+            <column caption='Markets Name' datatype='string' name='[markets_name]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_331859038443569153]' derivation='None' name='[none:Calculation_331859038443569153:nk]' pivot='key' type='nominal' />
+            <column-instance column='[cy_date]' derivation='Year' name='[yr:cy_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]'>
+            <groupfilter function='level-members' level='[markets_name]' user:ui-action-filter='[Action2_DF868B3CF1A440AA92FDED4E63E06E1E]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ax5xj314bghl61fhfic809qmume].[Action (Markets Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='8' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-weight' field='[federated.1ax5xj314bghl61fhfic809qmume].[yr:cy_date:ok]' value='bold' />
+            <format attr='font-size' field='[federated.1ax5xj314bghl61fhfic809qmume].[yr:cy_date:ok]' value='12' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ax5xj314bghl61fhfic809qmume].[none:Calculation_331859038443569153:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ax5xj314bghl61fhfic809qmume].[yr:cy_date:ok]</cols>
+      </table>
+      <simple-id uuid='{B1A46B12-50A2-4F41-A5A4-2A061AC1D855}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard-Profit Analysis'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones />
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='3' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{1F07E943-1D77-4E99-8E13-775126C3E050}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard-Revenue'>
+      <style />
+      <size maxheight='900' maxwidth='1200' minheight='900' minwidth='1200' sizing-mode='fixed' />
+      <zones>
+        <zone h='4375' id='1' name='Year' show-title='false' w='27500' x='30800' y='750' />
+        <zone h='4875' id='2' name='Month' show-title='false' w='73600' x='19900' y='5125' />
+        <zone h='9875' id='3' name='Revenue' w='21000' x='2100' y='11375' />
+        <zone h='12333' id='4' name='Quantity' w='17333' x='23667' y='9556' />
+        <zone h='51667' id='5' name='Revenue by Markets' w='20750' x='0' y='20333' />
+        <zone h='54000' id='6' name='Sales Quantity by Market' w='20000' x='21083' y='21333' />
+        <zone h='32222' id='7' name='Revenue by Year' w='53667' x='40833' y='8556' />
+        <zone h='22778' id='8' name='Top 5 Customers' w='27667' x='37333' y='42000' />
+        <zone h='22778' id='9' name='Top 5 Products' w='28250' x='65167' y='42556' />
+      </zones>
+      <simple-id uuid='{0F9CDB0D-E2AF-4727-AAB0-81C9BFF3B601}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FAFA9996-DC3E-489F-B0EF-C0DAD84688BD}' />
+    </window>
+    <window class='worksheet' name='Quantity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8223ED2A-4585-451E-963D-74A94977E89F}' />
+    </window>
+    <window class='worksheet' name='Revenue by Markets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7255ADC3-405E-4A19-B44B-21C5A8A2FCDE}' />
+    </window>
+    <window class='worksheet' name='Sales Quantity by Market'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9519A4B2-58CC-4D71-9C67-39103D03D8CB}' />
+    </window>
+    <window class='worksheet' name='Top 5 Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EBCB2681-2A78-4B3B-8D1B-3F2B32C2D32E}' />
+    </window>
+    <window class='worksheet' name='Top 5 Products'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF894A49-7BAC-488C-AE59-F08049356F72}' />
+    </window>
+    <window class='worksheet' name='Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AF81B046-8E78-407D-810D-1764EFE581C5}' />
+    </window>
+    <window class='worksheet' name='Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1D10A2EF-08BB-4FAF-96A6-36154DF87E77}' />
+    </window>
+    <window class='worksheet' name='Revenue by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ax5xj314bghl61fhfic809qmume].[sum:Calculation_331859038090604544:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{77B0BD60-F33A-444F-9DC8-9BEB3B573E6E}' />
+    </window>
+    <window class='dashboard' name='Dashboard-Revenue'>
+      <viewpoints>
+        <viewpoint name='Month' />
+        <viewpoint name='Quantity' />
+        <viewpoint name='Revenue' />
+        <viewpoint name='Revenue by Markets' />
+        <viewpoint name='Revenue by Year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sales Quantity by Market' />
+        <viewpoint name='Top 5 Customers' />
+        <viewpoint name='Top 5 Products' />
+        <viewpoint name='Year' />
+      </viewpoints>
+      <active id='5' />
+      <simple-id uuid='{496118CF-7A2A-45B4-B327-25E4DA051CCC}' />
+    </window>
+    <window class='dashboard' name='Dashboard-Profit Analysis'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{A7DBE692-44E5-4A26-B8A6-3F1475C44191}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Profit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{056477A0-A8E2-4B70-A873-C0C336C3B703}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='70' name='Profit' width='104'>
+      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
+      gUKc/wPhS1m7MyNP7gAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
